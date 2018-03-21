@@ -24,17 +24,34 @@ dependencies:
 
 library:
   source-dirs: src
+  dependencies:
+  # - bytestring
+  # - data-default
+  # - rocksdb-haskell
+  # - serialise
 
 executables:
   uhouse-core-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
-    - -threaded
     - -rtsopts
+    - -threaded
     - -with-rtsopts=-N
     dependencies:
-    - uhouse-core
+    - aeson
+    - blaze-html
+    - bytestring
+    - servant
+    - servant-server
+    - servant-js
+    - wai
+    - warp
+    - datetime
+    - text
+    - wai-cors
+    - time
+
 
 tests:
   uhouse-core-test:

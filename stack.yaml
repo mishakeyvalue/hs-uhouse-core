@@ -37,9 +37,21 @@ resolver: lts-10.8
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - .
+- location:
+    git: https://github.com/mitutee/uhouse-hardware-ds18s20
+    commit: df9f3533e0234b266c5c9646b30d04ad9b74462d
+    extra-dep: true
+
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
 # extra-deps: []
+extra-deps:
+- cborg-0.2.0.0
+- rocksdb-haskell-1.0.0
+- serialise-0.2.0.0
+- datetime-0.3.1
+
+# - uhouse-hardware-ds18s20-0.1.0.0
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
