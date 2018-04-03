@@ -25,10 +25,12 @@ dependencies:
 library:
   source-dirs: src
   dependencies:
-  # - bytestring
-  # - data-default
-  # - rocksdb-haskell
-  # - serialise
+  - servant
+  - servant-server
+  - uhouse-hardware-ds18s20 == 0.1.*
+  - o-clock
+  - sqlite-simple
+  - time
 
 executables:
   uhouse-core-exe:
@@ -39,18 +41,19 @@ executables:
     - -threaded
     - -with-rtsopts=-N
     dependencies:
+    - async
     - aeson
     - blaze-html
     - bytestring
     - servant
     - servant-server
-    - servant-js
     - wai
     - warp
     - datetime
     - text
     - wai-cors
     - time
+    - o-clock
 
 
 tests:

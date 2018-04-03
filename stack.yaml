@@ -39,8 +39,8 @@ packages:
 - .
 - location:
     git: https://github.com/mitutee/uhouse-hardware-ds18s20
-    commit: df9f3533e0234b266c5c9646b30d04ad9b74462d
-    extra-dep: true
+    commit: 79df58a961a0517f2e2997689754cedb5829e98e
+  extra-dep: true
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
@@ -50,8 +50,7 @@ extra-deps:
 - rocksdb-haskell-1.0.0
 - serialise-0.2.0.0
 - datetime-0.3.1
-
-# - uhouse-hardware-ds18s20-0.1.0.0
+- o-clock-0.1.1 
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
